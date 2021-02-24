@@ -25,12 +25,20 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <!-- <div id="root"></div> -->
     <script type="module">
+        // Criando a div de root em código
+        let root = document.createElement('div')
+        root.id = 'root'
+        // <div id="root"></div>
+        // A div root vai encaixada dentro do body
+        document.body.append(root)
+
         let div = document.createElement('div') // Cria um novo elemento na página
         div.textContent = 'Hello world!'
         div.className = 'container'
-        document.querySelector('#root').append(div)
+        // document.querySelector('#root').append(div)
+        root.append(div) // Já temos a div root capturada em uma variável
     </script>
 </body>
 
