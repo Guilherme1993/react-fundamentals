@@ -33,8 +33,6 @@ function UsernameForm({ onSubmitUsername }) {
   // setError -> função de atualização da variável de estado
   // A função useState aceita um parâmetro que é o VALOR INICIAL da variável
   // de estado. Ou seja, nesse caso, error tem um valor inicial de string vazia.
-
-  // useState() retorna um vetor que normalmente é recebido via desestruturação
   const [msg, setMsg] = React.useState('')
   const [username, setUsername] = React.useState('')
 
@@ -70,7 +68,7 @@ function UsernameForm({ onSubmitUsername }) {
       <div>
         <label>Username:</label>
         {/* Associando o ref usernameEl ao input */}
-        <input ref={usernameEl} id="username" type="text" onChange={handleChange} value={username} />
+        <input ref={usernameEl} id="username" type="text" onChange={handleChange} />
       </div>
       {/* O conteúdo da variável de estado pode ser lido sem necessidade de função auxiliar */}
       <div style={{ color: 'red'}}>{msg}</div>
